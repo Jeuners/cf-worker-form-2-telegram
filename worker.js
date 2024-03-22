@@ -2,7 +2,9 @@ addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request))
 })
 
+// Important! Store the token in a variable in the Cloudflare dashboard or configure it using Wrangler.
 const TELEGRAM_BOT_TOKEN = '{YOUR BOT TOKEN}';
+
 const CHAT_ID = '{YOUR CHAT ID}';
 const BASE_URL = `https://api.telegram.org/${TELEGRAM_BOT_TOKEN}`;
 const YOUR_DOMAIN = '{YOUR DOMAIN FOR REDIRECT}';
